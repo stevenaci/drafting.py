@@ -1,5 +1,4 @@
-
-drafting.py
+# Drafting
 
     This is a simple cli program which can accomplish the
     simple task of drawing an image using lines. Like a CNC machine!
@@ -9,6 +8,10 @@ drafting.py
 
     Or a robotics application!
     
+## Test proofs were made using MS paint:
+
+![input](test.jpg)
+![result](test_results.jpg)
 
 
 Install:
