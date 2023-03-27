@@ -1,7 +1,7 @@
 import time
 from pynput.mouse import Button, Controller
 from common import v2, Line
-from _image import convert_to_lines
+
 
 class Mouse(Controller):
 

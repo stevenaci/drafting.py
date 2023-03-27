@@ -8,10 +8,10 @@ def main():
     parser=argparse.ArgumentParser()
 
     parser.add_argument("--filename", help="Width of the final drawing", default="test.jpg")
-    parser.add_argument("--width", help="Width of the final drawing", default=710)
-    parser.add_argument("--height", help="Height of the final drawing", default=710)
-    parser.add_argument("--scaling", help="Spreads out the points by a factor, useful if you're drawing with a big brush for example", default=2)
-    parser.add_argument('--draw-delay', help="Delay between mouse actions", default=0.0000)
+    parser.add_argument("--width", help="Width of the final drawing", default=710, type=int)
+    parser.add_argument("--height", help="Height of the final drawing", default=710, type=int)
+    parser.add_argument("--scaling", help="Spreads out the points by a factor, useful if you're drawing with a big brush for example", default=2, type=int)
+    parser.add_argument('--draw-delay', help="Delay between mouse actions", default=0.0000, type=int)
 
     artist = Artist()
     args = parser.parse_args()
@@ -19,7 +19,8 @@ def main():
         args.filename, args.height, args.width, args.scaling, args.draw_delay
     )
     points = convert_to_lines(
-        filename=filename, scale_to=(
+        filename=filename, 
+        scale_to=(
             int(height/scaling), int(width/scaling)
         )
     )
