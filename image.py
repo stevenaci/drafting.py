@@ -1,12 +1,14 @@
 from PIL import Image
 from common import v2
 
+pixel_scale = 255
+high_pass = int(pixel_scale/2)
+gamma = 1.2
 def is_white_pixel(pix):
-    high_pass = 150
     return all([
-        pix[0] > 255 - high_pass,
-        pix[1] > 255 - high_pass,
-        pix[2] > 255 - high_pass,]
+        pix[0] > high_pass * gamma,
+        pix[1] > high_pass * gamma,
+        pix[2] > high_pass * gamma,]
     )
 
 def convert_to_lines(filename: str, scale_to: v2=None):
