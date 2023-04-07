@@ -1,6 +1,6 @@
 import argparse
-from Drawing import Artist
-from _image import convert_to_lines
+from artist import Artist
+from image import convert_to_lines
 from common import v2
 
 
